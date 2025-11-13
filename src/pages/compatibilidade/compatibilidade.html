@@ -24,20 +24,22 @@
         <h2>Verificador de compatibilidade</h2>
         <h4>Verifique se seu computador roda algum dos jogos mais famosos da atualidade</h4>
         <div class="dados_para_analisar">
-            <form action="">
+            <form action="" id="formulario_dados">
                 <div class="campos">
                     <label for="">Selecione o jogo desejado</label>
-                    <select name="" id="jogo_desejado">
+                    <select name="jogo_desejado" id="jogo_desejado">
+                        <option value="null"></option>
                         <option value="gta6">GTA 6</option>
-                        <option value="gta6">Elder Ring</option>
-                        <option value="gta6">Forza 5</option>
-                        <option value="gta6">FIFA 25</option>
-                        <option value="gta6">Cyber Punk</option>
+                        <option value="elderring">Elder Ring</option>
+                        <option value="forza5">Forza 5</option>
+                        <option value="fifa25">FIFA 25</option>
+                        <option value="cyberpunk">Cyber Punk</option>
                     </select>
                 </div>
                 <div class="campos">
                     <label for="">Sistema Operacional:</label>
-                    <select name="" id="sistemaoperacional">
+                    <select name="sistemaoperacional" id="sistemaoperacional">
+                        <option value="null"></option>
                         <option value="windows">Windows</option>
                         <option value="linux">Linux</option>
                         <option value="macos">MacOS</option>
@@ -45,7 +47,8 @@
                 </div>
                 <div class="campos">
                     <label for="">Memória RAM:</label>
-                    <select name="" id="RAM">
+                    <select name="RAM" id="RAM">
+                        <option value="null"></option>
                         <option value="4GB">4GB</option>
                         <option value="8GB">8GB</option>
                         <option value="12GB">12GB</option>
@@ -55,9 +58,10 @@
                 </div>
                 <div class="campos">
                     <label for="">Memória ROM:</label>
-                    <select name="" id="ROM">
+                    <select name="ROM" id="ROM">
+                        <option value="null"></option>
                         <option value="256GB">256GB</option>
-                        <option value="512">512</option>
+                        <option value="512GB">512GB</option>
                         <option value="1TB">1TB</option>
                         <option value="2TB">2TB</option>
                         <option value="4TB">4TB</option>
@@ -65,7 +69,8 @@
                 </div>
                 <div class="campos">
                     <label for="">Processador:</label>
-                    <select name="" id="processador">
+                    <select name="processador" id="processador">
+                        <option value="null"></option>
                         <option value="I3">I3</option>
                         <option value="I5">I5</option>
                         <option value="I7">I7</option>
@@ -77,7 +82,8 @@
                 </div>
                 <div class="campos">
                     <label for="">Placa de vídeo:</label>
-                    <select name="" id="placavideo">
+                    <select name="placavideo" id="placavideo">
+                        <option value="null"></option>
                         <option value="rtx3080">RTX 3080</option>
                         <option value="rtx3090">RTX 3090</option>
                         <option value="rtx4070">RTX 4070</option>
@@ -87,6 +93,7 @@
                 </div>
                 <button type="submit" value="Submit">Analisar</button>
             </form>
+            <div id="resultado_analise">TESTE</div>
         </div>
     </main>
     <script src="./script.js"></script>
