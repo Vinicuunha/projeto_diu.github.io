@@ -20,7 +20,9 @@ a {
 }
 
 #selecionado{
-  color: #FF6700;
+    text-decoration: none;
+    color: #FF6700;
+    border-bottom: 2px solid #FF6700;
 }
 
 /* ---------------- IMAGENS ---------------- */
