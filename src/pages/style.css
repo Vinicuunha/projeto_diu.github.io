@@ -19,6 +19,12 @@ a {
     color: white;
 }
 
+#selecionado{
+    text-decoration: none;
+    color: #FF6700;
+    border-bottom: 2px solid #FF6700;
+}
+
 /* ---------------- IMAGENS ---------------- */
 img {
     border: 1px solid #3b3b3b;

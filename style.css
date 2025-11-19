@@ -19,6 +19,10 @@ a {
     color: white;
 }
 
+#selecionado{
+  color: #FF6700;
+}
+
 /* ---------------- IMAGENS ---------------- */
 img {
     border: 1px solid #3b3b3b;
@@ -68,7 +72,7 @@ footer {
 .cabecalho a:hover {
     text-decoration: none;
     color: #FF6700;
-    border-bottom: 1px solid #FF6700;
+    border-bottom: 2px solid #FF6700;
 }
 
 
