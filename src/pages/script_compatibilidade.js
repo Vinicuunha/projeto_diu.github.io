@@ -10,13 +10,6 @@ const placavideo = document.getElementById('placavideo');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    console.log(jogo_desejado.value);
-    console.log(sistemaoperacional.value);
-    console.log(RAM.value);
-    console.log(ROM.value);
-    console.log(processador.value);
-    console.log(placavideo.value);
-
     if (jogo_desejado.value === 'gta6') {
         if (sistemaoperacional.value === 'windows') {
             if ((RAM.value === '8GB') || (RAM.value === '16GB') || (RAM.value === '32GB')) {
@@ -36,7 +29,7 @@ form.addEventListener('submit', (event) => {
             resultado_analise.innerHTML = resultado_analise.innerHTML + '<span style="color:#fc202a;">O jogo não roda no seu computador</span>';
 
         }
-    }else if (jogo_desejado.value === 'elderring') {
+    } else if (jogo_desejado.value === 'elderring') {
         if (sistemaoperacional.value === 'windows') {
             if ((RAM.value === '8GB') || (RAM.value === '16GB') || (RAM.value === '32GB')) {
                 if (processador.value != 'I3') {
@@ -55,7 +48,7 @@ form.addEventListener('submit', (event) => {
             resultado_analise.innerHTML = resultado_analise.innerHTML + '<span style="color:#fc202a;">O jogo não roda no seu computador</span>';
 
         }
-    }else if (jogo_desejado.value === 'forza5') {
+    } else if (jogo_desejado.value === 'forza5') {
         if (sistemaoperacional.value === 'windows') {
             if ((RAM.value === '8GB') || (RAM.value === '16GB') || (RAM.value === '32GB')) {
                 if ((processador.value != 'I3') && (processador.value != 'I5')) {
@@ -74,7 +67,7 @@ form.addEventListener('submit', (event) => {
             resultado_analise.innerHTML = resultado_analise.innerHTML + '<span style="color:#fc202a;">O jogo não roda no seu computador</span>';
 
         }
-    }else if (jogo_desejado.value === 'fifa25') {
+    } else if (jogo_desejado.value === 'fifa25') {
         if (sistemaoperacional.value === 'windows') {
             if ((RAM.value === '8GB') || (RAM.value === '16GB') || (RAM.value === '32GB')) {
                 if (processador.value != ' ') {
@@ -93,7 +86,7 @@ form.addEventListener('submit', (event) => {
             resultado_analise.innerHTML = resultado_analise.innerHTML + '<span style="color:#fc202a;">O jogo não roda no seu computador</span>';
 
         }
-    }else if (jogo_desejado.value === 'cyberpunk') {
+    } else if (jogo_desejado.value === 'cyberpunk') {
         if (sistemaoperacional.value === 'windows') {
             if ((RAM.value === '16GB') || (RAM.value === '32GB')) {
                 if ((processador.value != 'I3') && (processador.value != 'I5')) {
@@ -113,12 +106,6 @@ form.addEventListener('submit', (event) => {
 
         }
     }
-
-
-
-
-
-
 })
 
 
