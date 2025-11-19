@@ -1,164 +1,138 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ---------------- BODY ---------------- */
 body {
-    display: flex;
-    flex-direction: column; /* garante que o header fique em cima */
-    margin: 0;
-    padding: 0;
-    background-color: #3b3b3b;
-    align-items: center;
-    color: white;
-    font-family: Arial, sans-serif;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3b3b3b;
+  color: white;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ---------------- LINKS ---------------- */
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-#selecionado{
-    text-decoration: none;
-    color: #FF6700;
-    border-bottom: 2px solid #FF6700;
+#selecionado,
+.cabecalho a:hover {
+  color: #FF6700;
+  border-bottom: 2px solid #FF6700;
 }
 
 /* ---------------- IMAGENS ---------------- */
 img {
-    border: 1px solid #3b3b3b;
-    border-radius: 20px;
+  border: 1px solid #3b3b3b;
+  border-radius: 20px;
+  display: block;
 }
 
-/* ---------------- HEADER ---------------- */
-#logo {
-    height: 30px;
+/* ---------------- HEADER & FOOTER ---------------- */
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(48, 48, 48);
+  width: 100%;
+  padding: 10px;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(48, 48, 48);
-    width: 100%;
-    height: 70px;
-    border-bottom: 2px solid #FF6700;
+  height: 90px;
+  border-bottom: 2px solid #FF6700;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin-top: 15px;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(48, 48, 48);
-    width: 100%;
-    height: 50px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+#logo {
+  height: 30px;
 }
 
 .cabecalho {
-    display: flex;
-    flex-direction: row;
-    margin: 15px;
-    align-items: center;
-    justify-content: center; 
-    color: white;
-    gap: 25px;
-    font-weight: bold;
+  display: flex;
+  gap: 25px;
+  margin: 15px;
+  font-weight: bold;
 }
 
-.cabecalho a:hover {
-    text-decoration: none;
-    color: #FF6700;
-    border-bottom: 2px solid #FF6700;
-}
-
-
-
-/* ---------------- IMAGEM E TEXTO SOBREPOSTO ---------------- */
+/* ---------------- ITEM BASE ---------------- */
 .item {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    display: block;
-    transition: transform 0.3s ease, filter 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease, filter .3s ease;
 }
 
-/* zoom suave no hover */
 .item:hover img {
-    transform: scale(1.05);
-    filter: brightness(0.8);
+  transform: scale(1.05);
+  filter: brightness(0.8);
 }
 
-/* texto sobreposto */
+/* ---------------- TEXTO SOBREPOSTO ---------------- */
 .texto-sobreposto {
-    position: absolute;
-    bottom: 10px;
-    left: 15px;
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    background: rgba(0, 0, 0, 0.4);
-    padding: 6px 12px;
-    border-radius: 10px;
-    transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,.8);
+  transition: background .3s ease;
 }
 
-/* efeito hover: aparece mais forte */
 .item:hover .texto-sobreposto {
-    background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,.6);
 }
 
-/* ---------------- GRID ÚNICO ---------------- */
+/* ---------------- GRID ---------------- */
 .grid-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-auto-rows: auto;
   gap: 20px;
   width: 90%;
   max-width: 1200px;
   margin-top: 30px;
 }
 
-/* BLOCO GRANDE (ESQUERDA) */
 .item.grande {
   grid-row: 1 / 3;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
 }
 
-/* BLOCO PEQUENO (DIREITA) */
-.item.pequeno:nth-of-type(2) {
-  grid-column: 2;
-  grid-row: 1;
-}
+.item.pequeno:nth-of-type(2) { grid-column: 2; grid-row: 1; }
+.item.pequeno:nth-of-type(3) { grid-column: 2; grid-row: 2; }
 
-.item.pequeno:nth-of-type(3) {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-/* ---------------- BLOCOS HORIZONTAIS ---------------- */
+/* ---------------- ITENS HORIZONTAIS ---------------- */
 .item.horizontal {
   display: flex;
   align-items: center;
   gap: 20px;
   background-color: #2f2f2f;
-  border-radius: 15px;
   padding: 15px;
-  grid-column: 1 / 3; /* ocupa toda a largura do grid */
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 15px;
+  grid-column: 1 / 3;
+  transition: transform .3s ease, background-color .3s ease;
 }
 
 .item.horizontal:hover {
@@ -169,8 +143,8 @@ footer {
 .item.horizontal img {
   width: 220px;
   height: 140px;
-  border-radius: 10px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .texto-horizontal h3 {
@@ -200,12 +174,13 @@ footer {
   }
 }
 
-#controle-fonte{
-  position: fixed; 
-  top: 20px; 
-  right: 20px; 
-  background: #333; 
-  color: #fff; 
-  padding: 10px; 
+/* ---------------- CONTROLE DE FONTE ---------------- */
+#controle-fonte {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  padding: 10px;
   border-radius: 8px;
- }
+}
