@@ -47,13 +47,13 @@ a {
 }
 
 #selecionado {
-  color: #FF6700;
-  border-bottom: 2px solid #FF6700;
+  color: #2aff51da;
+  border-bottom: 2px solid #2aff51da;
 }
 
 .cabecalho a:hover {
-  color: #FF6700;
-  border-bottom: 1px solid #FF6700;
+  color: #2aff51da;
+  border-bottom: 1px solid #2aff51da;
 }
 
 /* ---------------- IMAGENS ---------------- */
@@ -77,7 +77,7 @@ footer {
 
 header {
   height: 90px;
-  border-bottom: 2px solid #FF6700;
+  border-bottom: 2px solid #2aff51da;
 }
 
 footer {
@@ -176,7 +176,7 @@ footer {
 }
 
 .texto-horizontal h3 {
-  color: #ff6700;
+  color: #2aff51da;
   margin-bottom: 8px;
 }
 
