@@ -50,7 +50,7 @@ footer {
   text-align: center;
   background-color: rgb(48, 48, 48);
   width: 100%;
-  padding: 10px;
+  padding: 17px;
 }
 
 header {
@@ -189,4 +189,20 @@ footer {
   color: #fff;
   padding: 10px;
   border-radius: 8px;
+}
+
+#div_principal_bkn{
+  width: 100%;
+  max-width: 1000px;
+   overflow-wrap: break-word;
+  margin-top: 15px;
+}
+
+#titulo_principal_bkn{
+  margin-top: 15px;
+  text-align: center;
+}
+
+#text_bkn_principal{
+  margin-top: 15px;
 }
