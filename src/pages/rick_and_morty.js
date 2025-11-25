@@ -1,5 +1,4 @@
 const retorno = document.getElementById('retorno')
-const personagem_selecionado = document.getElementById('personagem_selecionado')
 const URL = 'https://rickandmortyapi.com/api/character'; //url da api
 
 async function chamarApi() { //funcao da api
@@ -7,11 +6,15 @@ async function chamarApi() { //funcao da api
     console.log(resposta) //imprime o retorno no console
     if (resposta.status === 200) {
         const objeto = await resposta.json(); //criando uma variavel para armazenar o json de retorno da api
-        console.log(objeto)
-        for (let i = 0; i < objeto.results.length; i++) {
-            if (personagem_selecionado.value === objeto.results[i].name) {
+        const sorteador = Math.trunc(Math.random(objeto.results.name)*18)
+        console.log(sorteador)
+        for (let i = 0; i < sorteador; i++) {
+            if (sorteador === objeto.results[i].id) {
                 console.log("achou")
-                retorno.innerHTML= `<img src="${objeto.results[i].image}"><br>`; //imprime o retorno de objeto
+                retorno.innerHTML = `<img src="${objeto.results[i].image}"><br>`;
+                retorno.innerHTML += `Nome: ${objeto.results[i].name}<br>`;
+                retorno.innerHTML += `Espécie: ${objeto.results[i].species}<br>`;
+                retorno.innerHTML += `Gênero: ${objeto.results[i].gender}<br>`;
                 break;
             }
         }
