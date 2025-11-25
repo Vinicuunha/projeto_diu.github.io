@@ -22,15 +22,11 @@ async function chamarApi() { //funcao da api
         const objeto = await resposta.json(); //criando uma variavel para armazenar o json de retorno da api
         const sorteador = Math.trunc(Math.random(objeto.results.name)*18)
         console.log(sorteador)
-        for (let i = 0; i < sorteador; i++) {
-            if (sorteador === objeto.results[i].id) {
-                retorno.innerHTML = `<img src="${objeto.results[i].image}"><br>`;
-                retorno.innerHTML += `Nome: ${objeto.results[i].name}<br>`;
-                retorno.innerHTML += `Espécie: ${objeto.results[i].species}<br>`;
-                retorno.innerHTML += `Gênero: ${objeto.results[i].gender}<br>`;
-                break;
-            }
+        retorno.innerHTML = `<img src="${objeto.results[sorteador].image}"><br>`;
+        retorno.innerHTML += `Nome: ${objeto.results[sorteador].name}<br>`;
+        retorno.innerHTML += `Espécie: ${objeto.results[sorteador].species}<br>`;
+        retorno.innerHTML += `Gênero: ${objeto.results[sorteador].gender}<br>`;
         }
     }
-}
+
 
