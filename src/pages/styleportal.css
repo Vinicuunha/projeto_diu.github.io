@@ -15,7 +15,22 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #3b3b3b;
+  background-color: #0d002e;
+
+  /*Múltiplos Gradientes Radiais para o Efeito Swirl*/
+background:
+  radial-gradient(circle, #2aff50, #106596 70%),
+  repeating-conic-gradient(
+    from 0deg,
+    #00ff41 0deg 12deg,
+    transparent 12deg 24deg
+  ),
+  repeating-conic-gradient(
+    from 8deg,
+    #ccff00 0deg 10deg,
+    transparent 10deg 20deg
+  );
+
 }
 
 main{
