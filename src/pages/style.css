@@ -237,3 +237,15 @@ footer {
 #retorno img{
   border-radius: 100%;
 }
+
+
+#divimagens{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#divimagens img{
+  width: 300px;
+  height: 300px;
+}
